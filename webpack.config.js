@@ -1,5 +1,7 @@
 const path = require("path");
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const env = process.env.NODE_ENV || 'development';
 
 
 module.exports = (env) => {
@@ -14,9 +16,9 @@ console.log("inn")
         },
         module: {
             rules: [{
-                loader: "babel-loader",
                 test: /\.js$/,
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                use: ["babel-loader"]
             }, {
                 test: /\.s?css$/,
                 use: CSSExtract.extract({
@@ -38,7 +40,8 @@ console.log("inn")
             }]
         },
         plugins:[
-            CSSExtract
+            CSSExtract,
+            new UglifyJsPlugin(),
         ],
         devtool: isProduction ? "source-map" : "inline-source-map",
         devServer: {
