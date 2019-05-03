@@ -1,0 +1,28 @@
+.content-container {
+  min-height: 700px;
+}
+.bold {
+  font-weight: bold;
+}
+.tableWrapIn .teachercol{
+width: 170px;
+}
+
+.tableWrapIn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.none {
+  display: none;
+}
+.tableWrapIn div {
+  width: 100px;
+}
+.tableWrapIn .numline {
+  width: 20px;
+}
+.tableWrapIn a:hover
+{
+  text-decoration: none;
+  color: #000;
+  }

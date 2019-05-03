@@ -1,0 +1,257 @@
+.header {
+  background-color: $dark-blue;
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #013264;
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  padding: 1rem 10px;
+}
+
+.header .logo {
+  height: 55px;
+  padding: 5px;
+  margin-bottom: 1px;
+}
+
+.logo img {
+  width: 52%;
+  float: right;
+}
+.header__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: $s-size 0;
+}
+.header__content a {
+  margin: 5px;
+  width: 140px;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
+  h1 {
+    margin: 0;
+  }
+}
+.logout {
+  border: 1px solid;
+  width: 100px;
+  float: left;
+  margin-top: -28px;
+}
+
+.header h2 {
+  font-size: 22px;
+}
+.en {
+  margin: 0 10px;
+}
+
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+    transition: color 0.3s ease;
+}
+
+a:hover
+{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+#menuToggle
+{
+    display: block;
+    position: relative;
+    top: -36px;
+    left: 15px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+    background: #293363;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+ #menu {
+    position: absolute;
+    width: 300px;
+    margin: -68px 0 0 -37px;
+    padding: 10px 30px;
+    padding-top: 17px;
+    background: #f0f0f0;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    color: #293363;
+    border: 2px solid #293363;
+}
+#menu .quiz_m {
+    padding: 5px 0;
+    font-size: 16px;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.quiz_m button {
+    width: 175%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color:#293363;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .logo img {
+    width: 300px;
+    margin: -47px -23px -27px 20px;
+  }
+.tname{
+  position: absolute;
+    top: -26px;
+    
+}
+  nav{
+    width: 500px;
+    position: relative;
+    left: 500px;
+    top: -50px;
+  }
+
+  #menuToggle span {
+       display: none;
+}
+  .propWrap {   
+    display: inline-flex;
+  }
+  .quiz_m, .quiz_m button {
+      width: 150px;
+      font-size: 16px ;
+      color: #013264 !important;
+  }
+.quiz_m button {
+    width: 235px;
+    font-size: 16px ;
+    color: #013264 !important;
+}
+  .quiz_m h4{
+    font-weight: bold;
+    font-size: 16px;
+}
+ #menu a {
+ 
+    color: #013264;
+  }
+  #menu{
+    width: 492px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 105px 0 0;
+    background: transparent;
+    border: none;
+}
+  .header .logo {
+    padding: 10px;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .logout {
+    border: 1px solid;
+    width: 100px;
+    
+  }
+}

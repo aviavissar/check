@@ -1,0 +1,100 @@
+.create-quiz-wrap {
+  display: flex;
+  width: 100%;
+}
+.create-quiz {
+  width: 100%;
+  float: left;
+  @media (min-width: $desktop-breakpoint) {
+    width: 70%;
+  }
+}
+input[type="text"] {
+  margin: 10px;
+  height: 30px;
+  direction: rtl;
+  padding: 2px;
+  padding-right: 5px;
+  margin: 2px;
+}
+input[type="number"] {
+  margin: 10px;
+  height: 30px;
+  direction: rtl;
+  padding: 2px;
+  padding-right: 5px;
+  margin: 2px;
+}
+.comp-wrap {
+  width: 800px;
+  background-color: white;
+  margin: 0px auto;
+  display: flex;
+}
+
+.points {
+  width: 15%;
+}
+.ans {
+    width: 78.5%;
+  @media (min-width: $desktop-breakpoint) {
+    width: 80%;
+  }
+}
+.qus {
+  width: 90%;
+  @media (min-width: $desktop-breakpoint) {
+    width: 93.5%;
+  }
+}
+.answer {
+  text-align: right;
+  direction: rtl;
+  margin: 10px 0;
+  @media (min-width: $desktop-breakpoint) {
+    margin: 10px 0;
+  }
+  margin: 2px 0;
+}
+.answers {
+  height: 250px;
+  padding: 10px;
+}
+form {
+  width: 100%;
+  padding-right: 5px;
+  @media (min-width: $desktop-breakpoint) {
+    padding-right: 65px;
+  }
+}
+
+.wrap-ans {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapQ {
+  @media (min-width: $desktop-breakpoint) {
+    min-height: 610px;
+  }
+}
+.creatBt {
+  position: static;
+  bottom: 5px;
+  right: 38%;
+}
+#quizname {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0px 0px 0px;
+ 
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+#inputQuizName{
+    width:95.5%;
+    margin-bottom: 25px;
+}

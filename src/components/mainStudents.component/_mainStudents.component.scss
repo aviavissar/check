@@ -1,0 +1,113 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  min-height: 640px;
+  background-color: white;
+  margin: 0px auto;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+    width: 80vw;
+    padding: 4rem;
+    min-height: 780px;
+  }
+}
+
+.box-layout {
+  background-size: cover;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: fade-out(#3f51b5, 0.85);
+  border-radius: 3px;
+  text-align: center;
+  width: 25rem;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.question {
+  margin: 10px 0;
+  font-weight: normal;
+
+  color: black;
+  display: block;
+  background-color: white;
+}
+.box-title {
+  margin: 0 0 $m-size 0;
+  line-height: 2;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  color: $dark-grey;
+  line-height: 1.6;
+  background-color: #013264;
+}
+
+.flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.align-to-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  background: #3f51b5;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  width: 150px;
+  border-radius: 5px;
+  margin: 10px auto;
+  height: 50px;
+}
+button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.is-active {
+  font-weight: bold;
+}
+#logo {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    width: 167px;
+    height: 50px;
+  }
+}
+
+/*******desk top////***/
+
+@media only screen and (min-width: 600px) {
+  .align-to-center {
+    width: 1000px;
+    margin: 100px auto;
+  }
+}
