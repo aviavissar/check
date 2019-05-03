@@ -39,7 +39,7 @@ export class HeaderComponent extends React.Component {
                   : <div className="quiz_m"><Link className="" to={"/login"} > כניסת מרצים</Link></div>
               }
               <div className="quiz_m">
-                <Link to="/quiz" > SDSDASD </Link>
+                <Link to="/quiz" > מערכת בחנים </Link>
               </div>
             </ul>
           </div>
